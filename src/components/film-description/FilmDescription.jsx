@@ -1,7 +1,7 @@
 import React from 'react';
 import './_film-description.css';
 
-const FilmDescription = ({activeFilm: {name, description, date, timeline, genre}}) => (
+const FilmDescription = ({selectedFilm: {name, description, date, timeline, genre}}) => (
             <div className="description__block">
                 <div className="description__block_picture"/>
                 <div className="description__block_info">

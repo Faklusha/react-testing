@@ -1,12 +1,20 @@
 import React, {Component} from 'react';
-import Page from '../src/components/pages/Page';
+import {Provider} from 'react-redux';
+import {createStore} from 'redux';
+import Reducer from './reducers/reducer';
 
-class App extends Component {
+const store = createStore(Reducer);
+import Page from './components/pages/Page';
+
+
+export default class App extends Component {
     render() {
         return (
-            <Page/>
+            <div>
+                <Provider store={store}>
+                    <Page/>
+                </Provider>
+            </div>
         );
     }
 }
-
-export default App;
