@@ -16,12 +16,4 @@ describe('Description', () => {
             mount(<Description/>).html()
         ).toMatchSnapshot();
     });
-
-    it('it should render DescriptionOptions', () => {
-
-        const wrapper = mount(<Description isShownOptions/>);
-        expect(
-            mount(<Description isShownOptions/>).html()
-        ).toMatchSnapshot();
-    });
 });

@@ -7,15 +7,15 @@ configure({adapter: new Adapter()});
 describe('FilmDescription', () => {
 
     it('renders without crashing', () => {
-        const activeFilm = {timeline: 'timeline', name: 'name', genre: 'genre', date:'date', description: 'description'};
+        const activeFilm = {runtime: 'timeline', title: 'name', genres: 'genre', release_date:'date', overview: 'description'};
 
-        shallow(<FilmDescription activeFilm={activeFilm}/>);
+        shallow(<FilmDescription selectedFilm={activeFilm}/>);
     });
 
     it('it should render the expected HTML', () => {
-        const activeFilm = {timeline: 'timeline', name: 'name', genre: 'genre', date:'date', description: 'description'};
+        const activeFilm = {runtime: 'timeline', title: 'name', genres: 'genre', release_date:'date', overview: 'description'};
         expect(
-            mount(<FilmDescription activeFilm={activeFilm}/>).html()
+            mount(<FilmDescription selectedFilm={activeFilm}/>).html()
         ).toMatchSnapshot();
     });
 });
